@@ -10,6 +10,12 @@ The **Cat Microservice** is a Java-based backend service designed to handle vari
 - **SQS Messaging**: Handles queue-based message processing.
 - **Rate Limiting**: Prevents excessive API requests.
 - **Controllers**: Manages cat-related API endpoints.
+- **Cat Operations**:
+  - **Cat Registration**: Allows users to register a new cat with details like name, breed, and age.
+  - **Cat Archive**: Provides historical tracking of cats' records and activities.
+  - **Cat Toy Management**: Handles information on different cat toys and their availability.
+  - **Health Monitoring**: Tracks health data and vaccination records of registered cats.
+  - **Adoption Services**: Facilitates cat adoption by listing available cats and processing adoption requests.
 
 ## 🏗️ Project Structure
 ```
@@ -88,6 +94,8 @@ src/main/java/com/lesleyzh/cat_demo
 | POST | `/api/cats` | Add a new cat |
 | GET | `/api/cats/{id}` | Get cat details |
 | DELETE | `/api/cats/{id}` | Delete a cat |
+| GET | `/api/cats/toys` | Get available cat toys |
+| POST | `/api/cats/adoption` | Submit a cat adoption request |
 
 ## 📬 Kafka Topics
 - **`cat-events`** – Used for cat-related notifications.
