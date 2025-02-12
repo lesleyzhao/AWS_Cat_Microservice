@@ -1,0 +1,1 @@
+ALTER TABLE cat ADD COLUMN breed VARCHAR(255) NOT NULL default 'unknown';

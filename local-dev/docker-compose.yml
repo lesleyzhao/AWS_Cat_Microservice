@@ -1,0 +1,37 @@
+# postgres
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: demo_db
+    volumes:
+      - ./psql_scripts:/docker-entrypoint-initdb.d
+
+  redis:
+    image: arm64v8/redis:latest
+    ports:
+      - "6379:6379"
+
+  demo-localstack:
+    image: localstack/localstack:3.0.2
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - EDGE_PORT=4566
+      - SERVICES=s3, sqs, kinesis
+      - DEBUG=1
+    ports:
+      - "4549-4566:4549-4566"
+    volumes:
+      - ./aws:/etc/localstack/init/ready.d/  # ready hook
+      - localstack_data:/var/lib/localstack
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+volumes:
+    localstack_data: { }
+# 加完需要的环境后需要在terminal里run，成功后就会在docker desktop里出现：
+# docker-compose up -d
+# 然后点intellij最右侧tab上的database连
