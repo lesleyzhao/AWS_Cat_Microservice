@@ -65,7 +65,7 @@ src/main/java/com/lesleyzh/cat_demo
 ## 🛠️ Setup Instructions
 ### Prerequisites
 - Java 11+
-- Maven
+- Gradle (kts)
 - Docker (for containerized deployment)
 
 ### Steps to Run Locally
@@ -75,9 +75,17 @@ src/main/java/com/lesleyzh/cat_demo
    cd  AWS_Cat_Microservice
    ```
 
-2. **Run using Docker Compose**
+2. **Configure environment using Docker Compose**
    ```sh
    docker-compose up -d
+   ```
+3. **Build the project**
+   ```sh
+   ./gradlew build
+   ```
+4. **Run locally using Gradle**
+   ```sh
+   ./gradlew bootRun
    ```
 
 
