@@ -71,21 +71,15 @@ src/main/java/com/lesleyzh/cat_demo
 ### Steps to Run Locally
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/cat_demo.git
-   cd cat_demo
+   git clone https://github.com/lesleyzhao/AWS_Cat_Microservice.git
+   cd  AWS_Cat_Microservice
    ```
-2. **Build the project**
-   ```sh
-   mvn clean install
-   ```
-3. **Run using Docker Compose**
+
+2. **Run using Docker Compose**
    ```sh
    docker-compose up -d
    ```
-4. **Run locally using Maven**
-   ```sh
-   mvn spring-boot:run
-   ```
+
 
 ## 📡 API Endpoints
 | HTTP Method | Endpoint | Description |
