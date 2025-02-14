@@ -61,11 +61,12 @@ src/main/java/com/lesleyzh/cat_demo
 - **AWS SQS** – Message queue service for async processing.
 - **Redis** – Caching layer.
 - **Docker** – Containerization support.
+- **Gradle Kotlin DSL (gradle.kts)** – Build automation.
 
 ## 🛠️ Setup Instructions
 ### Prerequisites
 - Java 11+
-- Gradle (kts)
+- Gradle Kotlin DSL (gradle.kts)
 - Docker (for containerized deployment)
 
 ### Steps to Run Locally
